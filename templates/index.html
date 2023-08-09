@@ -18,33 +18,38 @@
     <div id="text" onclick="reset()"> Play Again? </div>
 </div>
 
+<div class="container">
+    <div class="row align-items-start">
+        <div class="col-3">
+            <button class="btn btn-primary btn-lg" id="compstart" onclick="compstartFunction()">Computer Goes First</button>
+            <button class="btn btn-primary btn-lg" id="change_comp_char" onclick="change_comp_char()"></button>
+        </div>
 
-<div class="container" id="main">
-    <div class="block1">
-        <div class="box" style="border-left: 0; border-top: 0" id="pos1" onclick="playFunction('1')"></div>
-        <div class="box" style="border-top: 0 ; display:block" id="pos2" onclick="playFunction('2')"></div>
-        <div class="box" style="border-top: 0; border-right: 0" id="pos3" onclick="playFunction('3')"></div>
-    </div>    
-    <div class="block1">
-        <div class="box" style="border-left: 0" id="pos4" onclick="playFunction('4')"></div>
-        <div class="box" id="pos5" onclick="playFunction('5')"></div>
-        <div class="box" style="border-right: 0" id="pos6" onclick="playFunction('6')"></div>
-    </div>
-    <div class="block1">
-        <div class="box" style="border-left: 0; border-bottom: 0" id="pos7" onclick="playFunction('7')"></div>
-        <div class="box" style="border-bottom: 0" id="pos8" onclick="playFunction('8')"></div>
-        <div class="box" style="border-right: 0; border-bottom: 0" id="pos9" onclick="playFunction('9')"></div>
-    </div>
-    <div id="gambleform">
-        <button class="btn btn-primary btn-sm" id="bet10" onclick="bet(10)">Bet 10X</button>
-        <button class="btn btn-primary btn-md" id="bet50" onclick="bet(50)">Bet 50X</button>
-        <button class="btn btn-primary btn-lg" id="bet100" onclick="bet(100)">Bet 100X</button>
-        <span class="border border-primary rounded" id="coins">  {{coins}}&#65504; </span>
-    </div>
+        <div class="col-7">
+            <div class="block1">
+                <div class="box" style="border-left: 0; border-top: 0" id="pos1" onclick="playFunction('1')"></div>
+                <div class="box" style="border-top: 0 ; display:block" id="pos2" onclick="playFunction('2')"></div>
+                <div class="box" style="border-top: 0; border-right: 0" id="pos3" onclick="playFunction('3')"></div>
+            </div>    
+            <div class="block1">
+                <div class="box" style="border-left: 0" id="pos4" onclick="playFunction('4')"></div>
+                <div class="box" id="pos5" onclick="playFunction('5')"></div>
+                <div class="box" style="border-right: 0" id="pos6" onclick="playFunction('6')"></div>
+            </div>
+            <div class="block1">
+                <div class="box" style="border-left: 0; border-bottom: 0" id="pos7" onclick="playFunction('7')"></div>
+                <div class="box" style="border-bottom: 0" id="pos8" onclick="playFunction('8')"></div>
+                <div class="box" style="border-right: 0; border-bottom: 0" id="pos9" onclick="playFunction('9')"></div>
+            </div>
 
-    <div id="leftbutton">
-        <button class="btn btn-primary btn-lg" id="compstart" onclick="compstartFunction()">Computer Goes First</button>
-        <button class="btn btn-primary btn-lg" id="change_comp_char" onclick="change_comp_char()"></button>
+        </div>
+
+        <div class="col-1">
+            <button class="btn btn-primary btn-sm" id="bet10" onclick="bet(10)">Bet 10X</button>
+            <button class="btn btn-primary btn-md" id="bet50" onclick="bet(50)">Bet 50X</button>
+            <button class="btn btn-primary btn-lg" id="bet100" onclick="bet(100)">Bet 100X</button>
+            <span class="border border-primary rounded" id="coins">  {{coins}}&#65504; </span>
+        </div>
     </div>
 </div>
 

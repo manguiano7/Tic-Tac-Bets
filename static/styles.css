@@ -86,19 +86,7 @@
 	-ms-transform: translate(-50%,-50%);
   }
 
-#gambleform {
-	position: relative;
-	width: 10vw;
-	top: -40vh;
-	left: 30.5vw;
-  }
 
-#leftbutton {
-	position: relative;
-	width:10vw;
-	top: -90vh;
-	right: 3vw;
-  }
 
   #coins {
 	position:relative;
