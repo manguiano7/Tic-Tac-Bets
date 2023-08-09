@@ -37,7 +37,7 @@
 }
 
 .btn{
-	width: 10vw;
+	width: 7vw;
 	font-weight: bold;
 	cursor: pointer;
 	font-size: 16px;
@@ -91,7 +91,7 @@
   #coins {
 	position:relative;
 	left:0vw;
-	width:15vw;
+	width:10vw;
   }
 
   #alert-funds {
