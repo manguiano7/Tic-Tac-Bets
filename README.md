@@ -78,12 +78,12 @@ and the page has a coin count.
 The front end of the game is in Index.html, the javascript code on the same page, and the associated css file. All buttons get disabled after any player (human or computer) makes the first move. This prevents the user from making a change to the game when the game already started or to prevent the user from betting mid-game (e.g., right before they are about to win). At the end of every game, these buttons get enabled.
 
 The back end of the game is in app.py. The session variables in app.py include:
--state_list to keep track of board states
--user_id to store the user's id and keep track of logged in users
--comp_player to keep track of who went first, if 1, the computer went first. If 2, computer went second.
--human_player, redundant variable to store if human went first / second (redundant in view of comp_player)
--bet_id to keep track of bets made
--num_moves to keep track of number of moves made while game is played
+1) state_list to keep track of board states
+2) user_id to store the user's id and keep track of logged in users
+3) comp_player to keep track of who went first, if 1, the computer went first. If 2, computer went second.
+4) human_player, redundant variable to store if human went first / second (redundant in view of comp_player)
+5) bet_id to keep track of bets made
+6) num_moves to keep track of number of moves made while game is played
 
 The session variable state_list in app.py is updated as each selection (i.e., move) is made on the Index.html page, and is updated based on the selected positions of the board. The user selects positions by selecting squares on the board. The computer selects positions via app.py and the functions get_next_move and get_next_move_gamble in the helpers.py file. The program is designed to update the cookie file based only on selected positions to prevent a nefarious user from feeding app.py a finished board state. Also, the Index.html page is updated as each move is made.
 
