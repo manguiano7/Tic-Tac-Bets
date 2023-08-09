@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Tic Tac Bets
+
+{% endblock %}
+
+{% block main %}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th class="text-start">Bet Amount</th>
+            <th class="text-start">Time Bet Placed</th>
+            <th class="text-end">Time Bet Settled</th>
+            <th class="text-end">Bet Status</th>
+            <th class="text-end">TOTAL</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- TODO: Loop through the database entries to display them in this table -->
+        {% for bet in past_bets %}
+        <tr>
+        <td class="text-start">{{bet["bet_amount"]}}</td>
+        <td class="text-start">{{bet["time_bet_placed"]}}</td>
+        <td class="text-end">{{bet["time_bet_settled"] }}</td>
+        <td class="text-end">{{bet["bet_status"]}}</td>
+        <td class="text-end"></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr>
+            <th class="text-start"></th>
+            <th class="text-start"></th>
+            <th class="text-end"></th>
+            {% if coins_won_bets >= 0 %}
+            <th class="text-end">COINS WON FROM BETS</th>
+            {% else %}
+            <th class="text-end">COINS LOST FROM BETS</th>
+            {% endif %}
+            <th class="text-end">{{coins_won_bets | abs}} &#65504;</th>
+        </tr>
+        <tr>
+            <th class="text-start"></th>
+            <th class="text-start"></th>
+            <th class="text-end"></th>
+            <th class="text-end">COINS WON FROM PLAYING</th>
+            <th class="text-end">{{coins_won_playing}} &#65504;</th>
+        </tr>
+        <tr>
+            <th class="text-start"></th>
+            <th class="text-start"></th>
+            <th class="text-end"></th>
+            <th class="text-end">TOTAL COINS</th>
+            <th class="text-end">{{total_coins}} &#65504;</th>
+        </tr>
+    </tfoot>
+</table>
+
+{% endblock %}
