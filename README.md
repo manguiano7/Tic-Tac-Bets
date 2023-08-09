@@ -67,15 +67,11 @@ There are many parts to the website, let's talk about a few things.
 ### The Index Page
 
 The Index.html page has a tic tac toe board and buttons:
--Computer Goes First, which allows the computer to make the first move
-
--Play as 'O' (or Play as 'X') to allow the user to change their character on the board
-
--Bet 10x to bet 10 coins
-
--Bet 50x to bet 50 coins
-
--Bet 100x to bet 100 coins
+1) Computer Goes First, which allows the computer to make the first move
+2) Play as 'O' (or Play as 'X') to allow the user to change their character on the board
+3) Bet 10x to bet 10 coins
+4) Bet 50x to bet 50 coins
+5) Bet 100x to bet 100 coins
 
 and the page has a coin count.
 
